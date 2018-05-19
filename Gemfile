@@ -13,3 +13,5 @@ gem "tilt", "~> 2.0"
 
 # Added at 2018-05-19 15:16:20 -0400 by gguida:
 gem "google-api-client", "~> 0.21.1"
+
+gem "rerun", "~> 0.13.0"
