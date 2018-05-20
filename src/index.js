@@ -1,4 +1,5 @@
 require('waypoints/lib/noframework.waypoints.min');
+import './style.scss';
 
 var waypoint = new Waypoint({
     element: document.getElementById('nav'),
