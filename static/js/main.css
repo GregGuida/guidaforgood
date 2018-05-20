@@ -6469,6 +6469,44 @@ body .content * {
 .container a:hover {
   text-decoration: underline; }
 
+#rsvp-form input[type=name],
+#rsvp-form input[type=text],
+#rsvp-form input[type=email] {
+  background: transparent;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  box-shadow: none; }
+  #rsvp-form input[type=name].error,
+  #rsvp-form input[type=text].error,
+  #rsvp-form input[type=email].error {
+    border-color: rgba(255, 0, 0, 0.5); }
+  #rsvp-form input[type=name]::-webkit-input-placeholder, #rsvp-form input[type=text]::-webkit-input-placeholder, #rsvp-form input[type=email]::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.25); }
+  #rsvp-form input[type=name]:-moz-placeholder, #rsvp-form input[type=text]:-moz-placeholder, #rsvp-form input[type=email]:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.25); }
+  #rsvp-form input[type=name]::-moz-placeholder, #rsvp-form input[type=text]::-moz-placeholder, #rsvp-form input[type=email]::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.25); }
+  #rsvp-form input[type=name]:-ms-input-placeholder, #rsvp-form input[type=text]:-ms-input-placeholder, #rsvp-form input[type=email]:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.25); }
+  #rsvp-form input[type=name]:focus,
+  #rsvp-form input[type=text]:focus,
+  #rsvp-form input[type=email]:focus {
+    border-color: white;
+    color: white; }
+
+#rsvp-form input[type=submit] {
+  display: block; }
+
+#rsvp-form label.radio {
+  color: rgba(255, 255, 255, 0.5); }
+  #rsvp-form label.radio.error {
+    color: rgba(255, 0, 0, 0.5); }
+  #rsvp-form label.radio:hover {
+    color: rgba(255, 255, 255, 0.5); }
+
 .registry-card {
   border-radius: 5px; }
   .registry-card img {

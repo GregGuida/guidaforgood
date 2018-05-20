@@ -54,18 +54,35 @@
     <h3 id="rsvp" class="section has-text-centered is-size-2">RSVP</h3>
     <div class="section">
         <form id="rsvp-form" action="/rsvp" method="post">
-            <input class="input" name="name" type="name" placeholder="Your Name"/>
-            <input class="input" name="email" type="email" placeholder="Your Email"/>
-            <input class="input" name="number_of_guests" type="number" placeholder="Number of Guests"/>
-            <label class="radio">
-                <input type="radio" name="answer" value="yes">
-                Yes will attend
-            </label>
-            <label class="radio">
-                <input type="radio" name="answer" value="no">
-                No I will not be attending
-            </label>
-            <input type="submit" value="Submit"/>
+            <div class="columns">
+                <div class="column">
+                    <input id="rsvp-form-name" class="input" name="name" type="name" placeholder="Your Name"/>
+                </div>
+                <div class="column">
+                    <input id="rsvp-form-email" class="input" name="email" type="email" placeholder="Your Email"/>
+                </div>
+                <div class="column">
+                    <input id="rsvp-form-number-of-guests" class="input" name="number_of_guests" type="text" placeholder="Number of Guests"/>
+                </div>
+            </div>
+            
+            <div class="level">
+                
+                <label class="radio level-item" for="rsvp-form-will-attend">
+                    <input id="rsvp-form-will-attend" type="radio" name="answer" value="yes">
+                    &nbsp;Yes will attend
+                </label>
+
+                
+                <label class="radio level-item" for="rsvp-form-will-not-attend">
+                    <input id="rsvp-form-will-not-attend" type="radio" name="answer" value="no">
+                    &nbsp; No I will not be attending
+                </label>
+            </div>
+
+            <div class="level">
+                <input class="level-item button" type="submit" value="Submit"/>
+            </div>
         </form>
     </div>
 </div>

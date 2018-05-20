@@ -1,5 +1,29 @@
 @import 'bulma';
 
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+  
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+  
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+  
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+  
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
 $background-color: #143a3e;
 $text-color: #EEE;
 
@@ -65,6 +89,49 @@ body .content * {
     text-decoration: underline
 }
 
+#rsvp-form input[type=name],
+#rsvp-form input[type=text],
+#rsvp-form input[type=email] {
+    background: transparent;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.5);
+    border-radius: 0;
+    box-shadow: none;
+
+    &.error {
+        border-color: rgba(255,0,0,0.5);
+    }
+
+    @include placeholder {
+        color: rgba(255,255,255,0.25);
+    }
+
+    &:focus {
+        border-color: rgba(255,255,255,1.0);
+        color: rgba(255,255,255,1.0);
+    }
+}
+
+#rsvp-form input {
+    &[type=submit] {
+        display: block;
+    }
+}
+
+#rsvp-form label.radio {
+    color: rgba(255,255,255,0.5);
+
+    &.error {
+        color: rgba(255,0,0,0.5);
+    }
+
+    &:hover {
+        color: rgba(255,255,255,0.5);
+    }
+}
+
 .registry-card {
     border-radius: 5px;
 
@@ -77,4 +144,3 @@ body .content * {
         margin: auto;
     }
 }
-
