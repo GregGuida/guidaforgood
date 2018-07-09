@@ -1,146 +1,143 @@
-@import 'bulma';
+@import "bulma";
+@import "~/animate.css/animate.css";
 
 @mixin optional-at-root($sel) {
-    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
-        @content;
-    }
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
 }
-  
+
 @mixin placeholder {
-    @include optional-at-root('::-webkit-input-placeholder') {
-        @content;
-    }
-  
-    @include optional-at-root(':-moz-placeholder') {
-        @content;
-    }
-  
-    @include optional-at-root('::-moz-placeholder') {
-        @content;
-    }
-  
-    @include optional-at-root(':-ms-input-placeholder') {
-        @content;
-    }
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
 }
 
 $background-color: #143a3e;
-$text-color: #EEE;
-
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: georgia, serif;
-    color: $text-color;
-    background-color: $background-color;
-    scroll-behavior: smooth;
+$text-color: #eee;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: georgia, serif;
+  color: $text-color;
+  background-color: $background-color;
+  scroll-behavior: smooth;
 }
 
 body .content * {
-    scroll-behavior: smooth;
-    color: $text-color;
+  scroll-behavior: smooth;
+  color: $text-color;
 }
 
 #container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #main-image {
-    padding-top: 5%;
-    color: #FFFFFF;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: url('../static/images/Abby+Greg-Engagement-83.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+  padding-top: 5%;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: url("../static/images/Abby+Greg-Engagement-83.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 @media screen and (max-device-width: 480px) {
-    #main-image {
-        background-attachment: scroll;
-    }
+  #main-image {
+    background-attachment: scroll;
+  }
 }
 
-.navbar, .navbar a.navbar-item:hover {
-    background-color: $background-color;
+.navbar,
+.navbar a.navbar-item:hover {
+  background-color: $background-color;
 }
 
 #main-image h1 {
-    font-size: 500%;
+  font-size: 500%;
 }
 
 #main-image h2 {
-    font-size: 300%;
+  font-size: 300%;
 }
 
 #grandview-map-image {
-    border-radius: 300px;
+  border-radius: 300px;
 }
 
 .container a {
-    text-decoration: underline
+  text-decoration: underline;
 }
 
 .container a:hover {
-    text-decoration: underline
+  text-decoration: underline;
 }
 
-#rsvp-form input[type=name],
-#rsvp-form input[type=text],
-#rsvp-form input[type=email] {
-    background: transparent;
-    border-style: solid;
-    border-width: 0 0 2px 0;
-    border-color: rgba(255,255,255,0.5);
-    color: rgba(255,255,255,0.5);
-    border-radius: 0;
-    box-shadow: none;
-
-    &.error {
-        border-color: rgba(255,0,0,0.5);
-    }
-
-    @include placeholder {
-        color: rgba(255,255,255,0.25);
-    }
-
-    &:focus {
-        border-color: rgba(255,255,255,1.0);
-        color: rgba(255,255,255,1.0);
-    }
+#rsvp-form input[type="name"],
+#rsvp-form input[type="text"],
+#rsvp-form input[type="email"] {
+  background: transparent;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  box-shadow: none;
+  &.error {
+    border-color: rgba(255, 0, 0, 0.5);
+  }
+  @include placeholder {
+    color: rgba(255, 255, 255, 0.25);
+  }
+  &:focus {
+    border-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 #rsvp-form input {
-    &[type=submit] {
-        display: block;
-    }
+  &[type="submit"] {
+    display: block;
+  }
 }
 
 #rsvp-form label.radio {
-    color: rgba(255,255,255,0.5);
-
-    &.error {
-        color: rgba(255,0,0,0.5);
-    }
-
-    &:hover {
-        color: rgba(255,255,255,0.5);
-    }
+  color: rgba(255, 255, 255, 0.5);
+  &.error {
+    color: rgba(255, 0, 0, 0.5);
+  }
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .registry-card {
-    border-radius: 5px;
+  border-radius: 5px;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
 
-    img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
+.is-centered {
+  margin: 0 auto;
 }

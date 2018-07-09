@@ -15,3 +15,10 @@ gem "tilt", "~> 2.0"
 gem "google-api-client", "~> 0.21.1"
 
 gem "rerun", "~> 0.13.0"
+
+gem 'puma'
+
+gem 'capistrano'
+gem 'capistrano-puma'
+gem 'capistrano-rbenv'
+gem 'capistrano-bundler'

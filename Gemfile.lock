@@ -3,6 +3,25 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    airbrussh (1.3.0)
+      sshkit (>= 1.6.1, != 1.7.0)
+    capistrano (3.11.0)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.3.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-puma (0.2.3)
+      capistrano (>= 3.0)
+    capistrano-rails (1.4.0)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rbenv (2.1.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+    concurrent-ruby (1.0.5)
     declarative (0.0.10)
     declarative-option (0.1.0)
     faraday (0.15.1)
@@ -24,6 +43,8 @@ GEM
       os (~> 0.9)
       signet (~> 0.7)
     httpclient (2.8.3)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
     jwt (1.5.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -39,11 +60,16 @@ GEM
     mime-types-data (3.2016.0521)
     multi_json (1.13.1)
     multipart-post (2.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (5.0.2)
     os (0.9.6)
     public_suffix (2.0.5)
+    puma (3.11.4)
     rack (1.6.10)
     rack-protection (1.5.5)
       rack
+    rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -64,6 +90,9 @@ GEM
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+    sshkit (1.17.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     tilt (2.0.8)
     uber (0.1.0)
 
@@ -71,7 +100,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
+  capistrano-bundler
+  capistrano-puma
+  capistrano-rails
+  capistrano-rbenv
   google-api-client (~> 0.21.1)
+  puma
   rerun (~> 0.13.0)
   sinatra (~> 1.4)
   tilt (~> 2.0)

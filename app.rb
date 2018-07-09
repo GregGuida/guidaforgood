@@ -2,6 +2,8 @@ require 'sinatra'
 require 'json'
 require './lib/rsvp_google_sheet'
 
+set :server, :puma
+
 set :public_folder, File.dirname(__FILE__) + '/static'
 
 get '/' do
@@ -21,7 +23,7 @@ post '/rsvp' do
         logger.error e 
         result = { status: "error" }
     end 
-    result
+    result.to_json
 end
 
 get '/rsvp' do

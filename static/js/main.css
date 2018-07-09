@@ -1,3 +1,4 @@
+@import url(/animate.css/animate.css);
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6419,17 +6420,18 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: georgia, serif;
-  color: #EEE;
+  color: #eee;
   background-color: #143a3e;
   scroll-behavior: smooth; }
 
 body .content * {
   scroll-behavior: smooth;
-  color: #EEE; }
+  color: #eee; }
 
 #container {
   width: 100%;
@@ -6437,7 +6439,7 @@ body .content * {
 
 #main-image {
   padding-top: 5%;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -6451,7 +6453,8 @@ body .content * {
   #main-image {
     background-attachment: scroll; } }
 
-.navbar, .navbar a.navbar-item:hover {
+.navbar,
+.navbar a.navbar-item:hover {
   background-color: #143a3e; }
 
 #main-image h1 {
@@ -6469,9 +6472,9 @@ body .content * {
 .container a:hover {
   text-decoration: underline; }
 
-#rsvp-form input[type=name],
-#rsvp-form input[type=text],
-#rsvp-form input[type=email] {
+#rsvp-form input[type="name"],
+#rsvp-form input[type="text"],
+#rsvp-form input[type="email"] {
   background: transparent;
   border-style: solid;
   border-width: 0 0 2px 0;
@@ -6479,25 +6482,25 @@ body .content * {
   color: rgba(255, 255, 255, 0.5);
   border-radius: 0;
   box-shadow: none; }
-  #rsvp-form input[type=name].error,
-  #rsvp-form input[type=text].error,
-  #rsvp-form input[type=email].error {
+  #rsvp-form input[type="name"].error,
+  #rsvp-form input[type="text"].error,
+  #rsvp-form input[type="email"].error {
     border-color: rgba(255, 0, 0, 0.5); }
-  #rsvp-form input[type=name]::-webkit-input-placeholder, #rsvp-form input[type=text]::-webkit-input-placeholder, #rsvp-form input[type=email]::-webkit-input-placeholder {
+  #rsvp-form input[type="name"]::-webkit-input-placeholder, #rsvp-form input[type="text"]::-webkit-input-placeholder, #rsvp-form input[type="email"]::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.25); }
-  #rsvp-form input[type=name]:-moz-placeholder, #rsvp-form input[type=text]:-moz-placeholder, #rsvp-form input[type=email]:-moz-placeholder {
+  #rsvp-form input[type="name"]:-moz-placeholder, #rsvp-form input[type="text"]:-moz-placeholder, #rsvp-form input[type="email"]:-moz-placeholder {
     color: rgba(255, 255, 255, 0.25); }
-  #rsvp-form input[type=name]::-moz-placeholder, #rsvp-form input[type=text]::-moz-placeholder, #rsvp-form input[type=email]::-moz-placeholder {
+  #rsvp-form input[type="name"]::-moz-placeholder, #rsvp-form input[type="text"]::-moz-placeholder, #rsvp-form input[type="email"]::-moz-placeholder {
     color: rgba(255, 255, 255, 0.25); }
-  #rsvp-form input[type=name]:-ms-input-placeholder, #rsvp-form input[type=text]:-ms-input-placeholder, #rsvp-form input[type=email]:-ms-input-placeholder {
+  #rsvp-form input[type="name"]:-ms-input-placeholder, #rsvp-form input[type="text"]:-ms-input-placeholder, #rsvp-form input[type="email"]:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.25); }
-  #rsvp-form input[type=name]:focus,
-  #rsvp-form input[type=text]:focus,
-  #rsvp-form input[type=email]:focus {
+  #rsvp-form input[type="name"]:focus,
+  #rsvp-form input[type="text"]:focus,
+  #rsvp-form input[type="email"]:focus {
     border-color: white;
     color: white; }
 
-#rsvp-form input[type=submit] {
+#rsvp-form input[type="submit"] {
   display: block; }
 
 #rsvp-form label.radio {
@@ -6516,6 +6519,9 @@ body .content * {
     left: 0;
     right: 0;
     margin: auto; }
+
+.is-centered {
+  margin: 0 auto; }
 
 
 /*# sourceMappingURL=main.css.map*/
