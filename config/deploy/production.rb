@@ -58,3 +58,13 @@ server "gregguida.com", user: "greg", roles: %w{app db web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+namespace :assets do
+  task :precompile_assets do
+    run_locally do
+      with rails_env: fetch(:stage) do
+        execute 'npx webpack
+      end
+    end
+  end
+end

@@ -13,11 +13,10 @@ GEM
     capistrano-bundler (1.3.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-npm (1.0.2)
+      capistrano (>= 3.0.0)
     capistrano-puma (0.2.3)
       capistrano (>= 3.0)
-    capistrano-rails (1.4.0)
-      capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
     capistrano-rbenv (2.1.3)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
@@ -102,8 +101,8 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-bundler
+  capistrano-npm
   capistrano-puma
-  capistrano-rails
   capistrano-rbenv
   google-api-client (~> 0.21.1)
   puma
