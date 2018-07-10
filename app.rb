@@ -2,7 +2,9 @@ require 'sinatra'
 require 'json'
 require './lib/rsvp_google_sheet'
 
-set :server, :puma
+configure {
+  set :server, :puma
+}
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 

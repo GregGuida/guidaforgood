@@ -28,13 +28,13 @@ install_plugin Capistrano::SCM::Git
 
 require "capistrano/rbenv"
 require "capistrano/bundler"
-require "capistrano/puma"
-require 'capistrano/npm'
 
-# require "capistrano/chruby"
-# require "capistrano/rails/assets"
-# require "capistrano/rails/migrations"
-# require "capistrano/passenger"
+require "capistrano/puma"
+install_plugin Capistrano::Puma  # Default puma tasks
+set :puma_bind, %w(tcp://0.0.0.0:9292 unix:///tmp/puma.sock)
+
+require 'capistrano/nvm'
+require 'capistrano/npm'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

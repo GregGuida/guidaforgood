@@ -19,7 +19,8 @@ gem "rerun", "~> 0.13.0"
 gem 'puma'
 
 gem 'capistrano'
-gem 'capistrano-puma'
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
+gem 'capistrano-nvm', require: false
 gem 'capistrano-npm'

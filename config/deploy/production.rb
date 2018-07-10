@@ -57,13 +57,18 @@ server "gregguida.com", user: "greg", roles: %w{app db web}
 #     forward_agent: false,
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
-#   }
+# 
+
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v8.9.0'
+
+set :puma_bind, %w(tcp://0.0.0.0:9292 unix:///tmp/puma.sock)
 
 namespace :assets do
   task :precompile_assets do
     run_locally do
       with rails_env: fetch(:stage) do
-        execute 'npx webpack
+        execute 'npx webpack'
       end
     end
   end
