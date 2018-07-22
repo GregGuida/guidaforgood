@@ -2204,3 +2204,137 @@ out. Run `bundle install` first.
  DEBUG [7b74857a] Command: cd /var/guidaforgood/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec pumactl -S /var/guidaforgood/shared/tmp/pids/puma.state -F /var/guidaforgood/shared/puma.rb restart )
  DEBUG [5b8870fa] 	Command restart sent success
   INFO [5b8870fa] Finished in 2.213 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-07-22 01:20:07 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [0b53af76] Running /usr/bin/env mkdir -p /tmp/guidaforgood/ as greg@gregguida.com
+ DEBUG [0b53af76] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp/guidaforgood/ )
+  INFO [6a7aad71] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/guidaforgood/nvm-exec.sh 0.0%
+  INFO Uploading /tmp/guidaforgood/nvm-exec.sh 100.0%
+  INFO [d8041589] Running /usr/bin/env chmod +x /tmp/guidaforgood/nvm-exec.sh as greg@gregguida.com
+ DEBUG [d8041589] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod +x /tmp/guidaforgood/nvm-exec.sh )
+  INFO [5e2c1a22] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [5880c820] Running [ -d $HOME/.nvm/v8.9.0 ] || [ -d $HOME/.nvm/versions/node/v8.9.0 ] as greg@gregguida.com
+ DEBUG [5880c820] Command: [ -d $HOME/.nvm/v8.9.0 ] || [ -d $HOME/.nvm/versions/node/v8.9.0 ]
+ DEBUG [119e092b] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [c70140e3] Running /usr/bin/env mkdir -p /tmp as greg@gregguida.com
+ DEBUG [c70140e3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [cc595802] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-guidaforgood-production-gguida.sh 0.0%
+  INFO Uploading /tmp/git-ssh-guidaforgood-production-gguida.sh 100.0%
+  INFO [131c47b4] Running /usr/bin/env chmod 700 /tmp/git-ssh-guidaforgood-production-gguida.sh as greg@gregguida.com
+ DEBUG [131c47b4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-guidaforgood-production-gguida.sh )
+  INFO [b17909c8] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [2ac91f6b] Running /usr/bin/env git ls-remote https://github.com/GregGuida/guidaforgood.git HEAD as greg@gregguida.com
+ DEBUG [2ac91f6b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env git ls-remote https://github.com/GregGuida/guidaforgood.git HEAD )
+ DEBUG [6669b8b0] 	67473da93292d61702ea4fa4c343762b729a9bba	HEAD
+  INFO [6669b8b0] Finished in 1.723 seconds with exit status 0 (successful).
+  INFO [a5d003c2] Running /usr/bin/env mkdir -p /var/guidaforgood/shared /var/guidaforgood/releases as greg@gregguida.com
+ DEBUG [a5d003c2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env mkdir -p /var/guidaforgood/shared /var/guidaforgood/releases )
+  INFO [23d31f55] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [18eb0037] Running [ -f /var/guidaforgood/shared/puma.rb ] as greg@gregguida.com
+ DEBUG [18eb0037] Command: [ -f /var/guidaforgood/shared/puma.rb ]
+ DEBUG [8044bdc1] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [194b1477] Running [ -f /var/guidaforgood/current/REVISION ] as greg@gregguida.com
+ DEBUG [194b1477] Command: [ -f /var/guidaforgood/current/REVISION ]
+ DEBUG [8a6a7fbf] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [6f2e02ce] Running /usr/bin/env cat /var/guidaforgood/current/REVISION 2>/dev/null as greg@gregguida.com
+ DEBUG [6f2e02ce] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env cat /var/guidaforgood/current/REVISION 2>/dev/null )
+ DEBUG [b443cf85] 	004c69b72af3fa1acca34b02bd876d4a8a4d64b4
+ DEBUG [b443cf85] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [7d0026e1] Running [ -f /var/guidaforgood/repo/HEAD ] as greg@gregguida.com
+ DEBUG [7d0026e1] Command: [ -f /var/guidaforgood/repo/HEAD ]
+ DEBUG [3f93f8c1] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/guidaforgood/repo
+ DEBUG [484d84c0] Running if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [484d84c0] Command: if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi
+ DEBUG [1c9c27c2] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [2eb62099] Running /usr/bin/env git remote set-url origin https://github.com/GregGuida/guidaforgood.git as greg@gregguida.com
+ DEBUG [2eb62099] Command: cd /var/guidaforgood/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env git remote set-url origin https://github.com/GregGuida/guidaforgood.git )
+  INFO [76beae96] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [92691af1] Running /usr/bin/env git remote update --prune as greg@gregguida.com
+ DEBUG [92691af1] Command: cd /var/guidaforgood/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [dfd762c4] 	Fetching origin
+ DEBUG [dfd762c4] 	From https://github.com/GregGuida/guidaforgood
+ DEBUG [dfd762c4] 	   004c69b..67473da  master     -> master
+  INFO [dfd762c4] Finished in 2.652 seconds with exit status 0 (successful).
+ DEBUG [0cf3b49d] Running if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [0cf3b49d] Command: if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi
+ DEBUG [8fb4ab06] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [90d33d01] Running /usr/bin/env mkdir -p /var/guidaforgood/releases/20180722052010 as greg@gregguida.com
+ DEBUG [90d33d01] Command: cd /var/guidaforgood/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env mkdir -p /var/guidaforgood/releases/20180722052010 )
+  INFO [d0013072] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [1a80c201] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/guidaforgood/releases/20180722052010 as greg@gregguida.com
+ DEBUG [1a80c201] Command: cd /var/guidaforgood/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/guidaforgood/releases/20180722052010 )
+  INFO [c3d7d4b1] Finished in 0.926 seconds with exit status 0 (successful).
+ DEBUG [103d6124] Running if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [103d6124] Command: if test ! -d /var/guidaforgood/repo; then echo "Directory does not exist '/var/guidaforgood/repo'" 1>&2; false; fi
+ DEBUG [85c18d26] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [91ef95ae] Running /usr/bin/env git rev-list --max-count=1 master as greg@gregguida.com
+ DEBUG [91ef95ae] Command: cd /var/guidaforgood/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-guidaforgood-production-gguida.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4ffc42fe] 	67473da93292d61702ea4fa4c343762b729a9bba
+ DEBUG [4ffc42fe] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [5e2214d7] Running if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [5e2214d7] Command: if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi
+ DEBUG [5f74f6a5] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [7df1864e] Running /usr/bin/env echo "67473da93292d61702ea4fa4c343762b729a9bba" > REVISION as greg@gregguida.com
+ DEBUG [7df1864e] Command: cd /var/guidaforgood/releases/20180722052010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env echo "67473da93292d61702ea4fa4c343762b729a9bba" > REVISION )
+  INFO [e07feb4a] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [cb8c4f86] Running if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [cb8c4f86] Command: if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi
+ DEBUG [6f7a22b4] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [0bec4668] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/guidaforgood/shared/bundle as greg@gregguida.com
+ DEBUG [0bec4668] Command: cd /var/guidaforgood/releases/20180722052010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/guidaforgood/shared/bundle )
+ DEBUG [6013aceb] 	The Gemfile's dependencies are satisfied
+ DEBUG [6013aceb] Finished in 3.100 seconds with exit status 0 (successful).
+ DEBUG [123a7473] Running if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [123a7473] Command: if test ! -d /var/guidaforgood/releases/20180722052010; then echo "Directory does not exist '/var/guidaforgood/releases/20180722052010'" 1>&2; false; fi
+ DEBUG [01a2eb6f] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [6df34b99] Running /tmp/guidaforgood/nvm-exec.sh npm install --production --silent --no-progress as greg@gregguida.com
+ DEBUG [6df34b99] Command: cd /var/guidaforgood/releases/20180722052010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /tmp/guidaforgood/nvm-exec.sh npm install --production --silent --no-progress )
+ DEBUG [8d502cf0] 	Now using node v8.9.0 (npm v5.5.1)
+ DEBUG [8d502cf0] 	added 11 packages in 14.963s
+  INFO [8d502cf0] Finished in 27.852 seconds with exit status 0 (successful).
+  INFO [7e507924] Running /usr/bin/env ln -s /var/guidaforgood/releases/20180722052010 /var/guidaforgood/releases/current as greg@gregguida.com
+ DEBUG [7e507924] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env ln -s /var/guidaforgood/releases/20180722052010 /var/guidaforgood/releases/current )
+  INFO [1375cefa] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [46b265c9] Running /usr/bin/env mv /var/guidaforgood/releases/current /var/guidaforgood as greg@gregguida.com
+ DEBUG [46b265c9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env mv /var/guidaforgood/releases/current /var/guidaforgood )
+  INFO [ea2bc501] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [54249cca] Running /usr/bin/env ls -x /var/guidaforgood/releases as greg@gregguida.com
+ DEBUG [54249cca] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env ls -x /var/guidaforgood/releases )
+ DEBUG [2b1f2be8] 	20180710025024	20180710030351	20180710030454	20180710032243	20180710034513
+20180722052010
+ DEBUG [2b1f2be8] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on gregguida.com
+ DEBUG [2e4a7957] Running [ -d /var/guidaforgood/current ] as greg@gregguida.com
+ DEBUG [2e4a7957] Command: [ -d /var/guidaforgood/current ]
+ DEBUG [653bb964] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [1f744392] Running /usr/bin/env readlink /var/guidaforgood/current as greg@gregguida.com
+ DEBUG [1f744392] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env readlink /var/guidaforgood/current )
+ DEBUG [83d0545d] 	/var/guidaforgood/releases/20180722052010
+ DEBUG [83d0545d] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [8b8b8eda] Running /usr/bin/env rm -rf /var/guidaforgood/releases/20180710025024 as greg@gregguida.com
+ DEBUG [8b8b8eda] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env rm -rf /var/guidaforgood/releases/20180710025024 )
+  INFO [71a448e6] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [5d4602b8] Running if test ! -d /var/guidaforgood/releases; then echo "Directory does not exist '/var/guidaforgood/releases'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [5d4602b8] Command: if test ! -d /var/guidaforgood/releases; then echo "Directory does not exist '/var/guidaforgood/releases'" 1>&2; false; fi
+ DEBUG [8dcf3026] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [077d70e0] Running /usr/bin/env echo "Branch master (at 67473da93292d61702ea4fa4c343762b729a9bba) deployed as release 20180722052010 by gguida" >> /var/guidaforgood/revisions.log as greg@gregguida.com
+ DEBUG [077d70e0] Command: cd /var/guidaforgood/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" ; /usr/bin/env echo "Branch master (at 67473da93292d61702ea4fa4c343762b729a9bba) deployed as release 20180722052010 by gguida" >> /var/guidaforgood/revisions.log )
+  INFO [345dbb3b] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [492e9734] Running if test ! -d /var/guidaforgood/current; then echo "Directory does not exist '/var/guidaforgood/current'" 1>&2; false; fi as greg@gregguida.com
+ DEBUG [492e9734] Command: if test ! -d /var/guidaforgood/current; then echo "Directory does not exist '/var/guidaforgood/current'" 1>&2; false; fi
+ DEBUG [481a93bc] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [d781e620] Running [ -f /var/guidaforgood/shared/tmp/pids/puma.pid ] as greg@gregguida.com
+ DEBUG [d781e620] Command: [ -f /var/guidaforgood/shared/tmp/pids/puma.pid ]
+ DEBUG [6c6ed4f0] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [2bf66daa] Running /usr/bin/env kill -0 $( cat /var/guidaforgood/shared/tmp/pids/puma.pid ) as greg@gregguida.com
+ DEBUG [2bf66daa] Command: cd /var/guidaforgood/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /var/guidaforgood/shared/tmp/pids/puma.pid ) )
+ DEBUG [79642965] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [a93ff282] Running $HOME/.rbenv/bin/rbenv exec bundle exec pumactl -S /var/guidaforgood/shared/tmp/pids/puma.state -F /var/guidaforgood/shared/puma.rb restart as greg@gregguida.com
+ DEBUG [a93ff282] Command: cd /var/guidaforgood/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" NODE_VERSION="v8.9.0" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec pumactl -S /var/guidaforgood/shared/tmp/pids/puma.state -F /var/guidaforgood/shared/puma.rb restart )
+ DEBUG [07731f46] 	Command restart sent success
+  INFO [07731f46] Finished in 3.144 seconds with exit status 0 (successful).
